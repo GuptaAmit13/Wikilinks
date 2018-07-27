@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html >
+  <head>
+
+ <script type="text/javascript">
+history.pushState(null, null, '#');
+window.addEventListener('popstate', function(event) {
+history.pushState(null, null, '#');
+});
+
+// slight update to account for browsers not supporting e.which
+function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+// To disable f5
+    /* jQuery < 1.7 */
+$(document).bind("keydown", disableF5);
+/* OR jQuery >= 1.7 */
+$(document).on("keydown", disableF5);
+</script>
+
+<script >
+document.onmousedown=disableclick;
+status="Right Click Disabled";
+function disableclick(event)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;    
+   }
+}
+</script>
+
+</script>
+
+
+</script>
+
+    <style>
+    @font-face{
+        font-family:wiki1;
+        src:("{% static 'css/fonts/fontomas-webfont.eot' %}");
+    }
+    </style>
+
+    <meta charset="UTF-8">
+     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/icons.css' %}"  media="screen,projection"/>
+    <link rel="shortcut icon" href="{% static 'images/wikipedia_alt_1.ico' %}" />
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Wikilinks</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Wikilinks" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate-custom.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style1.css'%}">
+  </head>
+
+  <body oncontextmenu="return false" class="container-fuild" background="{% static 'images/bg-about2.png'%}">
+<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+<div class="card-panel transparent " align="Center">
+    <div style="float:left;margin-right:-150px;margin-top:-15px" align="left">
+      <img src="{% static 'images/brand2.png'%}" height="100px" width="200px">
+    </div>
+    <div style="float:right;margin-left:-150px;margin-top:-10px">
+      <img src="{% static 'images/logopisb.png'%}" height="auto" width="150px">
+    </div>
+    <div align="center"  >
+    <p style="color:white;font-size:40px;font-family:wiki1">Time Left </p>
+    <a style="color:white;font-size:40px;font-family:monospace" id="timer">00:00</a><br>
+</div>
+  </div>
+<p align="center"><font face="Sol_Thin" size="30" color="#bdbdbd"><u>QUESTION</u></font></p>
+  <div align="center">
+    <font face="Sol_Thin" size=35 color="#9e9e9e">Level: {{level}}</font>
+  </div>
+    <div align="center">
+      <font face="Sol_Thin" size="35" color="#9e9e9e">Source: </font>
+      <font face="Sol_Thin" size="35" color="#9e9e9e">{{question_start}}</font>
+    </div>  
+    <div align="center">
+      <font face="Sol_Thin" size="35" color="#9e9e9e">Destination: </font>
+      <font face="Sol_Thin" size="35" color="#9e9e9e">{{question_end}}</font>
+    </div>
+    <div align="center" style="padding:20px">
+    <a href="/wiki/?x={{question_start}}"><button class="btn waves-effect waves-light" type="submit" name="action">NEXT
+      </button></a>
+    </div>
+
+<script>
+  window.setTimeout("refresh()",500);
+  function refresh()
+  {
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+      {
+          CreateTimer("timer",parseInt(xmlhttp.responseText));
+      }
+    }
+    xmlhttp.open("GET","/time",true);
+    xmlhttp.send();
+    return
+  }
+    
+  </script>
+
+
+  <script type="text/javascript">
+  //window.onload = CreateTimer("timer",{{t}});
+  var Timer;
+  var TotalSeconds;
+
+
+  function CreateTimer(timer, Time) 
+  {
+    Timer = document.getElementById(timer);
+    TotalSeconds = Time;
+
+    UpdateTimer()
+    window.setTimeout("Tick()", 1000);  
+  }
+
+  function Tick() 
+  {
+    if (TotalSeconds <= 0 || TotalSeconds>900)
+    {
+      window.location="/timeup"
+      return;
+    }
+
+    TotalSeconds -= 1;
+    UpdateTimer()
+    window.setTimeout("Tick()", 1000);
+  }
+
+  function UpdateTimer() 
+  {
+    Seconds=TotalSeconds;
+    var Hours = Math.floor(Seconds / 3600);
+    Seconds -= Hours * (3600);
+
+    var Minutes = Math.floor(Seconds / 60);
+    Seconds -= Minutes * (60);
+
+    Hours=Hours%24
+
+    var totalTime=Set(Hours)+":"+Set(Minutes)+":"+Set(Seconds); 
+
+    Timer.innerHTML=totalTime;
+
+    function Set(Time) {
+
+    return (Time < 10) ? "0" + Time : + Time;
+
+  }
+}
+</script>
+
+  </body>
+</html>

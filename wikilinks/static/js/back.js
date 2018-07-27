@@ -1,0 +1,13 @@
+history.pushState(null, null, '#');
+window.addEventListener('popstate', function(event) {
+history.pushState(null, null, '#');
+});
+/*
+// slight update to account for browsers not supporting e.which
+function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+// To disable f5
+    // jQuery < 1.7 
+$(document).bind("keydown", disableF5);
+// OR jQuery >= 1.7 
+$(document).on("keydown", disableF5);
+*/

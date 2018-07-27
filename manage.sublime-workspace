@@ -1,0 +1,528 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"q",
+				"question_end"
+			],
+			[
+				"que",
+				"question"
+			],
+			[
+				"S",
+				"Sol_Thin"
+			],
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"id",
+				"index"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"csr",
+				"csrf_exempt"
+			],
+			[
+				"s",
+				"style	Attr"
+			],
+			[
+				"cl",
+				"color	Attr"
+			],
+			[
+				"n",
+				"new_user"
+			],
+			[
+				"user",
+				"usernamepassword"
+			],
+			[
+				"user_",
+				"user_receiptno"
+			],
+			[
+				"us",
+				"user_name"
+			],
+			[
+				"f",
+				"filter"
+			],
+			[
+				"for",
+				"form"
+			],
+			[
+				"c",
+				"csrf"
+			],
+			[
+				"quest",
+				"questionAdmin"
+			],
+			[
+				"ques",
+				"question_text"
+			],
+			[
+				"url",
+				"url"
+			],
+			[
+				"ren",
+				"render"
+			],
+			[
+				"wii",
+				"wikilinks"
+			],
+			[
+				"d",
+				"django"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"C",
+				"CharField"
+			],
+			[
+				"Dt",
+				"dt"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"i",
+				"input"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"l",
+				"link	Tag"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"fr",
+				"frameset	Tag"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"ha",
+				"header	Tag"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"fra",
+				"frameset	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n{% load staticfiles %}\n<!--[if lt IE 7 ]> <html lang=\"en\" class=\"no-js ie6 lt8\"> <![endif]-->\n<!--[if IE 7 ]>    <html lang=\"en\" class=\"no-js ie7 lt8\"> <![endif]-->\n<!--[if IE 8 ]>    <html lang=\"en\" class=\"no-js ie8 lt8\"> <![endif]-->\n<!--[if IE 9 ]>    <html lang=\"en\" class=\"no-js ie9\"> <![endif]-->\n<!--[if (gt IE 9)|!(IE)]><!--> <html lang=\"en\" class=\"no-js\"> <!--<![endif]-->\n    <head>\n    <!--<script type = \"text/javascript\" >\n    history.pushState(null, null, 'index');\n    window.addEventListener('popstate', function(event) {\n    history.pushState(null, null, 'index');\n    });\n    </script>-->\n    <link rel=\"shortcut icon\" href=\"{% static 'images/wikipedia_alt_1.ico' %}\" />\n        <meta charset=\"UTF-8\" />\n        <!-- <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">  -->\n        <title>Wikilinks</title>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n        <meta name=\"description\" content=\"Wikilinks\" />\n        <link rel=\"shortcut icon\" href=\"../favicon.ico\"> \n        <link rel=\"stylesheet\" type=\"text/css\" href=\"{% static 'css/demo.css' %}\" />\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"{% static 'css/style.css' %}\" />\n		<link rel=\"stylesheet\" type=\"text/css\" href=\"{% static 'css/animate-custom.css' %}\" />\n\n        <link rel=\"stylesheet\" href=\"{% static 'css/normalize.css'%}\">\n    <link rel=\"stylesheet\" href=\"{% static 'css/style1.css'%}\">\n\n\n    </head>\n    <body background=\"{% static 'images/bg-about1.png'%}\" style=\"background-repeat:no-repeat\">\n        <div class=\"container\" style=\"float:left\">\n            <header>\n                <h1 ><font face=\"Sol_Thin\" color=\"\">Wikilinks</font></h1>\n            </header>\n            <div style=\"float:left;margin-left:100px; margin-top:50px\">\n    <div class='Cube panelLoad'>\n    <div class='cube-face cube-face-front'>Wiki</div>\n    <div class='cube-face cube-face-back'>Wiki</div>\n    <div class='cube-face cube-face-left'>Links</div>\n    <div class='cube-face cube-face-right'>Links</div>  \n    <div class='cube-face cube-face-bottom'>Wiki</div>\n    <div class='cube-face cube-face-top'>Links</div>\n  </div>\n</div>\n\n\n            <section>				\n                <div id=\"container_demo\" >\n                    <a class=\"hiddenanchor\" id=\"toregister\"></a>\n                    <a class=\"hiddenanchor\" id=\"tologin\"></a>\n                    <div id=\"wrapper\">\n                        <div id=\"login\" class=\"animate form\">\n                            <form method=\"POST\" autocomplete=\"off\">\n                                <h1>Log in</h1> \n                                <p> \n                                    <label for=\"username\" class=\"uname\" data-icon=\"u\" > Your Username </label>\n                                    <input id=\"username\" name=\"username\" required=\"required\" type=\"text\" placeholder=\"myusername \"/>\n                                </p>\n                                <p> \n                                    <label for=\"password\" class=\"youpasswd\" data-icon=\"p\"> Your password </label>\n                                    <input id=\"password\" name=\"password\" required=\"required\" type=\"password\" placeholder=\"eg. X8df!90EO\" /> \n                                </p>\n								</p>\n                                    <input id=\"submit\" name=\"submit\" value=\"login\" type=\"hidden\">\n                                <p class=\"login button\"> \n                                    <input type=\"submit\" value=\"Login\" /> \n								</p>\n                                <p class=\"change_link\">\n									Not a member yet ?\n									<a href=\"#toregister\" class=\"to_register\">Join us</a>\n								</p>\n                            </form>\n                        </div>\n\n                        <div id=\"register\" class=\"animate form\">\n                            <form method=\"POST\" autocomplete=\"off\" value=\"signup\"> \n                                <h1> Sign up </h1> \n                                <p> \n                                    <label for=\"usernamesignup\" class=\"uname\" data-icon=\"u\">Your username</label>\n                                    <input id=\"usernamesignup\" name=\"usernamesignup\" required=\"required\" type=\"text\" placeholder=\"mysuperusername690\" />\n                                </p>\n                                <p> \n                                    <label for=\"receiptno.\" class=\"youreceipt\"> Your ReceiptNo.</label>\n                                    <input id=\"receiptno.\" name=\"youreceipt\" required=\"required\" /> \n                                </p>\n                                <p> \n                                    <label for=\"passwordsignup\" class=\"youpasswd\" data-icon=\"p\">Your password </label>\n                                    <input id=\"passwordsignup\" name=\"passwordsignup\" required=\"required\" type=\"password\" placeholder=\"eg. X8df!90EO\"/>\n                                </p>\n                                <input id=\"submit\" name=\"submit\" value=\"signup\" type=\"hidden\">\n                                <p class=\"signin button\"> \n									<input id=\"submit\" type=\"submit\" value=\"Sign up\"/> \n								</p>\n                                <p class=\"change_link\">  \n									Already a member ?\n									<a href=\"#tologin\" class=\"to_register\"> Go and log in </a>\n								</p>\n                            </form>\n                        </div>\n						\n                    </div>\n                </div>  \n            </section>\n        </div>\n    </body>\n</html>",
+			"file": "wikilinks/templates/wikilinks/LoginRegistrationForm/index.html",
+			"file_size": 5554,
+			"file_write_time": 130848973149383702,
+			"settings":
+			{
+				"buffer_size": 5457,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wikilinks/templates/wikilinks/LoginRegistrationForm/question.html",
+			"settings":
+			{
+				"buffer_size": 1795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wikilinks/templates/wikilinks/LoginRegistrationForm/rulespage.html",
+			"settings":
+			{
+				"buffer_size": 2341,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/amitgupta/wiki",
+		"/home/amitgupta/wiki/wiki",
+		"/home/amitgupta/wiki/wikilinks",
+		"/home/amitgupta/wiki/wikilinks/static",
+		"/home/amitgupta/wiki/wikilinks/templates",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks/LoginRegistrationForm"
+	],
+	"file_history":
+	[
+		"/home/amitgupta/wiki/wikilinks/models.py",
+		"/home/amitgupta/wiki/wiki/settings.py",
+		"/home/amitgupta/wiki/wikilinks/admin.py",
+		"/home/amitgupta/wiki/wikilinks/views.py",
+		"/home/amitgupta/wiki/wikilinks/urls.py",
+		"/home/amitgupta/wiki/wiki/urls.py",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks/LoginRegistrationForm/rulespage.html",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks/LoginRegistrationForm/index.html",
+		"/home/amitgupta/wiki/wikilinks/forms.py",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks/LoginRegistrationForm/signup.html",
+		"/home/amitgupta/wiki/wikilinks/migrations/forms.py",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks/forms.py",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks/base_site.html",
+		"/home/amitgupta/wiki/wikilinks/templates/wikilinks/index.html",
+		"/home/amitgupta/wiki/templates/admin/base_site.html",
+		"/home/amitgupta/wiki/wiki/wsgi.py",
+		"/home/amitgupta/wikilinks/login/models.py",
+		"/home/amitgupta/wiki/wiki/__init__.py",
+		"/home/amitgupta/Downloads/wiky.js-master/wiky.js",
+		"/opt/lampp/htdocs/materialize/php/signup.php",
+		"/opt/lampp/htdocs/materialize/Index.html",
+		"/home/amitgupta/test",
+		"/home/amitgupta/Bootstraps/materialize/php/signup.php",
+		"/home/amitgupta/Bootstraps/materialize/Index.html",
+		"/home/amitgupta/Bootstraps/parallax-template/index.html",
+		"/media/amitgupta/AC8EC21C8EC1DEC8/xampp/htdocs/web/frame1.html",
+		"/home/amitgupta/.cache/.fr-b9hX8I/parallax-template/index.html",
+		"/home/amitgupta/Bootstraps/Basic.html",
+		"/home/amitgupta/Bootstraps/materialize.html",
+		"/media/amitgupta/AC8EC21C8EC1DEC8/xampp/htdocs/web/frames.html",
+		"/home/amitgupta/test.c",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/result.php",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/AssignmentC.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/AssignmnetC.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/AssignmnetC.php",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/AssignmentB2.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/AssignmentB2.css",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Html/main.css",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Html/First.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/AssignmentB.css",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/AssignmentB.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Html/new.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Html/new.css",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/frame3.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/frame2.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/frame1.html",
+		"/media/amitgupta/B6CC0F77CC0F30E3/Users/Amit/Desktop/Sem 5/WET/WEB/frames.html",
+		"/home/amitgupta/new"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"media",
+			"src",
+			"background",
+			"time"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wikilinks/templates/wikilinks/LoginRegistrationForm/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1673,
+								1673
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 483.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wikilinks/templates/wikilinks/LoginRegistrationForm/question.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1753,
+								1753
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 249.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wikilinks/templates/wikilinks/LoginRegistrationForm/rulespage.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								860,
+								860
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 321.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "manage.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

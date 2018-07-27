@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html >
+  <head>
+
+<script type="text/javascript">
+history.pushState(null, null, '#');
+window.addEventListener('popstate', function(event) {
+history.pushState(null, null, '#');
+});
+
+// slight update to account for browsers not supporting e.which
+function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+// To disable f5
+    /* jQuery < 1.7 */
+$(document).bind("keydown", disableF5);
+/* OR jQuery >= 1.7 */
+$(document).on("keydown", disableF5);
+</script>
+
+</script>
+    <meta charset="UTF-8">
+     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/icons.css' %}"  media="screen,projection"/>
+    <link rel="shortcut icon" href="{% static 'images/wikipedia_alt_1.ico' %}" />
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Wikilinks</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Wikilinks" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate-custom.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style1.css'%}">
+  </head>
+
+  <body class="container-fuild" background="{% static 'images/bg-about2.png'%}">
+<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+<div class="card-panel transparent " align="Center">
+    <div style="float:left;margin-right:-150px;margin-top:-15px" align="left">
+      <img src="{% static 'images/brand2.png'%}" height="100px" width="200px">
+    </div>
+    <div style="float:right;margin-left:-150px;margin-top:-10px">
+      <img src="{% static 'images/logopisb.png'%}" height="70x" width="175px">
+    </div>
+    <p  align="center" style="padding:30px;margin-top:100px;"><font face="Sol_Thin" size="30" color="#bdbdbd"><u>CONGRATULATIONS</u></font></p>
+    <p align="center" style="padding:30px;margin-top:10px;"><font face="Sol_Thin" size="30" color="#bdbdbd">YOU WON !!!
+    </font></p>
+  </div>
+  </body>
+</html>

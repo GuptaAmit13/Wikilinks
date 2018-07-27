@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+<link rel="shortcut icon" href="{% static 'images/wikipedia_alt_1.ico' %}" />
+
+
+<style type="text/css">
+  .list1
+  {
+    font-size: 25px;
+    line-height: 60px;
+  }
+</style>
+
+<script language="javascript" type="text/javascript">
+<!--
+function popitup(url) {
+  newwindow=window.open(url,'WIKILINKS','screen.availWidth,screen.availHeight,location=no,menubar=no,toolbar=no');
+  if (window.focus) {newwindow.focus()}
+  return false;
+}
+
+// -->
+</script>
+
+<script type="text/javascript">
+// slight update to account for browsers not supporting e.which
+function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+// To disable f5
+    /* jQuery < 1.7 */
+$(document).bind("keydown", disableF5);
+/* OR jQuery >= 1.7 */
+$(document).on("keydown", disableF5);
+
+$(document).ready(function() {
+$("body").bind("contextmenu",function(){
+   return false;
+});});  
+
+</script>
+
+
+<script type="text/javascript" language="javascript">
+function DisableBackButton() {
+window.history.forward()
+}
+DisableBackButton();
+window.onload = DisableBackButton;
+window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+window.onunload = function() { void (0) }
+</script>
+
+<!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/icons.css' %}"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>WIKILINKS</title>
+	
+
+</head>
+<body class="container-fuild" background="{% static 'images/bg-about2.png'%}">
+<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+     
+<!--WebPage Code Starts Here-->
+	<div class="card-panel transparent " align="Center">
+		<div style="float:left;margin-right:-150px;margin-top:-15px" align="left">
+			<img src="{% static 'images/brand2.png'%}" height="100px" width="200px">
+		</div>
+		<div style="float:right;margin-left:-150px;margin-top:-10px">
+			<img src="{% static 'images/logopisb.png'%}" height="auto" width="150px">
+		</div>
+		<p><font face="Sol_Thin" size="30" color="#bdbdbd"><u>RULES</u></font></p>
+	</div>
+  <div style="font:Sol_Thin;color:#bdbdbd;size:10px;" align="center">
+    <p list-style-type="circle" >
+        <li class="list1">The Game consist of 7 Levels. Each Level having one question to link.</li>
+        <li class="list1">You Will Be Given Source and Destination Points.</li>
+        <li class="list1">You have to reach the destination from source with just the help of hyperlinks provided in the wikipedia page itself.</li>
+        <li class="list1">Don't use the left side panel of Wikipedia page.</li>
+        <li class="list1">Once clicked on the link you cannot go back. Going Back is not allowed.</li>
+        <li class="list1">Complete all the Levels to finish the Game.</li>
+        <li class="list1">Time given is 15 Minutes.</li>
+        <li class="list1">If a link reloads the same page, you are looking in the wrong place (Trust me ;)</li>
+        <li class="list1">Don't Use search bar of wikipedia.</li>
+        <li class="list1">Red Link Indicates Dead Links,click it on your risk.</li>
+        <li class="list1">Don't Click on Reference Links.</li>
+        <li class="list1">Don't use Title Links.</li>
+        <li class="list1">In case any error occurs,Notify the team Oraganizer ASAP.</li>
+    </ul>
+  </div>
+  <br>
+  <div align="center">
+
+  		<a  href="login" onclick="return popitup('login')"><button class="btn waves-effect waves-light" type="submit" name="action">Continue to Login	
+  		</button></a>
+  </div>
+</body>
+</html>

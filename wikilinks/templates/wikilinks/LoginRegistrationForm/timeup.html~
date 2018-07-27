@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html >
+  <head>
+
+<!--<script type = "text/javascript" >
+
+    history.pushState(null, null, 'index');
+    window.addEventListener('popstate', function(event) {
+    history.pushState(null, null, 'index');
+    });
+    </script>
+-->
+    <meta charset="UTF-8">
+     <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'css/icons.css' %}"  media="screen,projection"/>
+    <link rel="shortcut icon" href="{% static 'images/wikipedia_alt_1.ico' %}" />
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Wikilinks</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Wikilinks" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate-custom.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style1.css'%}">
+  </head>
+
+  <body class="container-fuild" background="{% static 'images/bg-about2.png'%}">
+<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+<div class="card-panel transparent " align="Center">
+    <div style="float:left;margin-right:-150px;margin-top:-15px" align="left">
+      <img src="{% static 'images/brand2.png'%}" height="100px" width="200px">
+    </div>
+    <div style="float:right;margin-left:-150px;margin-top:-10px">
+      <img src="{% static 'images/logopisb.png'%}" height="70x" width="175px">
+    </div>
+    <p style="padding-top:300px;"><font face="Sol_Thin" size="30" color="#bdbdbd"><u>Time Up Buddy !!</u></font></p>
+  </div>
+  
+  </body>
+</html>
